@@ -22,6 +22,8 @@ struct list
 			return (BinarySearch(array, mid + 1, last, x));
 	}
 
+	
+	
 	int LinarSearch(int *array, int x)
 	{
 		for (int i = 0; i < top; i++)
@@ -35,6 +37,9 @@ struct list
 		return -1;
 	}
 
+	
+	
+	
 	int Search(int x)
 	{
 		int pos = -1;
@@ -60,20 +65,24 @@ struct list
 		return pos;
 	}
 
+	
+	
+	
 	void Sort()
 	{
 		int i, j, pos;
 		for (i = 0; i < top; i++)
 		{
+			
 			int min = data[i];
-			for (j = i + 1; j < top; j++)
-			{
+			 for (j = i + 1; j < top; j++)
+			 {
 				if (data[j] < min)
 				{
 					pos = j;
 					min = data[pos];
 				}
-			}
+			 }
 
 			int temp = data[i];
 			data[i] = data[pos];
@@ -82,6 +91,8 @@ struct list
 		isSorted = true;
 	}
 
+	
+	
 	void insert(int x)
 	{
 		if (!isSorted)
@@ -145,7 +156,7 @@ struct list
 	}
 };
 
-int main()
+void main()
 {
 	list L;
 	int choice;
@@ -184,5 +195,5 @@ int main()
 			break;
 		}
 	} while (choice != 0);
-	return 0;
+	return;
 }
